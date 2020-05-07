@@ -1,6 +1,6 @@
 package com.carlos.product.utils;
 
-import com.carlos.product.VO.ResultVO;
+import com.carlos.product.vo.ResultVO;
 
 /**
  * @author Carlos

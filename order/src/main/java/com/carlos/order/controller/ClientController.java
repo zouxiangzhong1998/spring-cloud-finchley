@@ -1,6 +1,7 @@
 package com.carlos.order.controller;
 
 import com.carlos.order.client.ProductClient;
+import com.carlos.order.dto.CartDTO;
 import com.carlos.order.pojo.ProductInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +44,12 @@ public class ClientController {
     public String listForOrder() {
         List<ProductInfo> productInfos = productClient.listForOrder(Arrays.asList("157875196366160022", "157875227953464068"));
         log.info("productInfos = {}", productInfos);
+        return "ok";
+    }
+
+    @GetMapping("/productDecreaseStock")
+    public String productDecreaseStock() {
+        productClient.decreaseStock(Arrays.asList(new CartDTO("164103465734242707", 3)));
         return "ok";
     }
 

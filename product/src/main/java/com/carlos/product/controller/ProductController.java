@@ -1,8 +1,9 @@
 package com.carlos.product.controller;
 
-import com.carlos.product.VO.ProductInfoVO;
-import com.carlos.product.VO.ProductVO;
-import com.carlos.product.VO.ResultVO;
+import com.carlos.product.dto.CartDTO;
+import com.carlos.product.vo.ProductInfoVO;
+import com.carlos.product.vo.ProductVO;
+import com.carlos.product.vo.ResultVO;
 import com.carlos.product.pojo.ProductCategory;
 import com.carlos.product.pojo.ProductInfo;
 import com.carlos.product.service.ProductCategoryService;
@@ -77,12 +78,18 @@ public class ProductController {
 
     /**
      * 获取商品列表（给订单服务用的）
+     *
      * @param productIdList ids
      * @return
      */
     @PostMapping("/listForOrder")
-    public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList){
+    public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList) {
         return productInfoService.findListByProductIdList(productIdList);
+    }
+
+    @PostMapping("/decreaseStock")
+    public void decreaseStock(@RequestBody List<CartDTO> cartDTOList) {
+        productInfoService.decreaseStock(cartDTOList);
     }
 
 }

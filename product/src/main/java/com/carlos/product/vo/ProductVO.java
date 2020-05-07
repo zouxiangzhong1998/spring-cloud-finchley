@@ -1,4 +1,4 @@
-package com.carlos.product.VO;
+package com.carlos.product.vo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

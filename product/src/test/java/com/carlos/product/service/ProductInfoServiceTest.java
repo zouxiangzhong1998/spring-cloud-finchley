@@ -1,14 +1,14 @@
 package com.carlos.product.service;
 
 import com.carlos.product.ProductApplicationTests;
+import com.carlos.product.dto.CartDTO;
 import com.carlos.product.pojo.ProductInfo;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Carlos
@@ -24,5 +24,10 @@ public class ProductInfoServiceTest extends ProductApplicationTests {
     public void findUpAll() {
         List<ProductInfo> list = productInfoService.findUpAll();
         Assert.assertTrue(list.size() > 0);
+    }
+
+    @Test
+    public void decreaseStock(){
+        productInfoService.decreaseStock(Arrays.asList(new CartDTO("157875196366160022",2)));
     }
 }

@@ -1,5 +1,6 @@
 package com.carlos.product.service;
 
+import com.carlos.product.dto.CartDTO;
 import com.carlos.product.pojo.ProductInfo;
 
 import java.util.List;
@@ -23,5 +24,11 @@ public interface ProductInfoService {
      * @return ProductInfo数据
      */
     List<ProductInfo> findListByProductIdList(List<String> productIdList);
+
+    /**
+     * 扣库存
+     * @param cartDTOList
+     */
+    void decreaseStock(List<CartDTO> cartDTOList);
 
 }
