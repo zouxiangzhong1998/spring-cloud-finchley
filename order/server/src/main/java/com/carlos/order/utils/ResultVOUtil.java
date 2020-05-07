@@ -1,6 +1,6 @@
 package com.carlos.order.utils;
 
-import com.carlos.order.VO.ResultVO;
+import com.carlos.order.vo.ResultVO;
 
 /**
  * @author Carlos

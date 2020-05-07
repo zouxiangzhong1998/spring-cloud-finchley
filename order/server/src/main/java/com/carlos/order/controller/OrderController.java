@@ -1,6 +1,6 @@
 package com.carlos.order.controller;
 
-import com.carlos.order.VO.ResultVO;
+import com.carlos.order.vo.ResultVO;
 import com.carlos.order.converter.OrderForm2OrderDTOConverter;
 import com.carlos.order.dto.OrderDTO;
 import com.carlos.order.enums.ResultEnum;

@@ -1,4 +1,4 @@
-package com.carlos.order.VO;
+package com.carlos.order.vo;
 
 import lombok.Data;
 

@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 /**
  * @author Carlos
  * @version 1.0.0
@@ -23,7 +21,7 @@ public class ProductCategoryServiceTest extends ProductApplicationTests {
 
     @Test
     public void findByCategoryTypeIn() {
-        List<ProductCategory> list = productCategoryService.findByCategoryTypeIn(Arrays.asList(11, 22));
+        List<ProductCategory> list = productCategoryService.findByCategoryTypeIn(Arrays.asList(1, 2));
         Assert.assertTrue(list.size() > 0);
     }
 }
