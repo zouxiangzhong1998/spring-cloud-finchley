@@ -10,3 +10,4 @@ spring:
       server:
         git:
           uri: https://github.com/zouxiangzhong1998/spring-cloud-finchley-config-repo.git
+          basedir: D:\Documents\Workspaces\Carlos\idea-workspaces\spring-cloud-finchley\config\basedir

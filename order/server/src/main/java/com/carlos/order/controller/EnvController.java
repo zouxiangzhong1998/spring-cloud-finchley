@@ -1,0 +1,25 @@
+package com.carlos.order.controller;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author Carlos
+ * @version 1.0.0
+ * @date 2020/5/8 13:49
+ */
+@RestController
+@RequestMapping("/env")
+public class EnvController {
+
+    @Value("${env}")
+    private String env;
+
+    @GetMapping("/print")
+    public String print(){
+        return env;
+    }
+
+}
