@@ -1,3 +1,2 @@
-# 配置中心
-
-
+# spring-cloud-finchley-config-repo
+spring-cloud-finchley 配置中心
