@@ -16,11 +16,21 @@ public interface StreamClient {
 
     String OUTPUT = "myMessageOutput";
 
+    String INPUT2 = "myMessageInput2";
+
+    String OUTPUT2 = "myMessageOutput2";
+
     @Input(INPUT)
     SubscribableChannel input();
 
     @Output(OUTPUT)
     MessageChannel output();
+
+    @Input(INPUT2)
+    SubscribableChannel input2();
+
+    @Output(OUTPUT2)
+    MessageChannel output2();
 
 
 }

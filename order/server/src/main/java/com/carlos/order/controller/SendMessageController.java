@@ -1,5 +1,6 @@
 package com.carlos.order.controller;
 
+import com.carlos.order.dto.OrderDTO;
 import com.carlos.order.message.StreamClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.support.MessageBuilder;
@@ -19,10 +20,14 @@ public class SendMessageController {
     @Autowired
     private StreamClient streamClient;
 
+    /**
+     * 发送 orderDTO 对象
+     */
     @GetMapping("/sendMessage")
     public void process() {
-        String message = "now " + new Date();
-        streamClient.output().send(MessageBuilder.withPayload(message).build());
+        OrderDTO orderDTO = new OrderDTO();
+        orderDTO.setOrderId("123456");
+        streamClient.output().send(MessageBuilder.withPayload(orderDTO).build());
     }
 
 }
