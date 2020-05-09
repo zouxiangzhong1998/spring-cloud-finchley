@@ -1,0 +1,16 @@
+zuul:
+  # 修改路由服务
+  routes:
+    product:
+      # 修改路径名称
+      path: /product/**
+      # 默认 "Cookie", "Set-Cookie", "Authorization" 隐藏
+      sensitiveHeaders:
+  # 排除某些路由
+  ignored-patterns:
+  #- /**/product/list
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
