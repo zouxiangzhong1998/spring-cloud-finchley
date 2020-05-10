@@ -2,6 +2,7 @@ package com.carlos.product.client;
 
 import com.carlos.product.common.DecreaseStockInput;
 import com.carlos.product.common.ProductInfoOutput;
+import com.carlos.product.fallback.ProductClientClientFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,7 +14,7 @@ import java.util.List;
  * @version 1.0.0
  * @date 2020/5/7 13:12
  */
-@FeignClient(name = "product")
+@FeignClient(name = "product",fallback = ProductClientClientFallback.class)
 public interface ProductClient {
 
     /**
