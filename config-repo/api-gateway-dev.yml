@@ -16,3 +16,10 @@ management:
     web:
       exposure:
         include: "*"
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
