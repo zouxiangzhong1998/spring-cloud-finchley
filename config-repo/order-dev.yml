@@ -16,9 +16,7 @@ spring:
     port: 6379
   zipkin:
     sender:
-      type: rabbit
-    service:
-      name: order
+      type: web
     base-url: http://localhost:9411/
   sleuth:
     sampler:
@@ -39,6 +37,9 @@ girl:
 feign:
   hystrix:
     enabled: true
-logging:
-  level:
-    org.springframework.cloud.openfeign: debug
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
