@@ -14,7 +14,7 @@ spring:
           uri: https://github.com/zouxiangzhong1998/spring-cloud-finchley-config-repo.git
           basedir: D:\Documents\Workspaces\Carlos\idea-workspaces\spring-cloud-finchley\config\basedir
   rabbitmq:
-    host: 139.199.211.226
+    host: localhost
     port: 5672
     username: guest
     password: guest
